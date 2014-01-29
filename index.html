@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ruby On Rails</title>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Fenix|Hammersmith+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="indexStyle.css">
+    </head>
+    <body>
+        <header>
+            <div class="content">
+                <img src='rails.png'/>
+                <h1>Ruby On Rails</h1>                
+            </div>  
+            <nav>
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+            </nav> 
+            <div class="fixedNav">
+                <div class="content">
+                    <img src='rails.png'/>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="tutorial.html">Tutorial</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </nav> 
+            </div>
+                    
+        </header>         
+        <div class="content">
+            <h1>Ruby on Rails</h1>
+            <section id="whatIsIt">
+                <p>
+                    Ruby on Rails is an open-source web application framework 
+                    that focuses on convention rather than configuration.
+                </p>
+                <p>
+                    Ruby on Rails uses the Ruby programming language in 
+                    connection with an SQLite3 database. Rails makes assumptions
+                    about what the developer needs to get his/her web 
+                    application up and running. Therefore the development of the
+                    application requires less configuration and gives the 
+                    developer more time to code the application rather than 
+                    worry about the framework.
+                </p>
+                <p>
+                    There are two main philosophies that Ruby on Rails attempts
+                    to emphasize:                
+                </p>
+                <ul>
+                    <li>
+                        DRY - "Don't Repeat Yourself." Repetitive code is bad
+                    </li>
+                    <li>
+                        Convention Over Configuration - Rails makes assumptions 
+                        about what you want rather than requiring lots of 
+                        configuration.
+                    </li>
+                </ul>
+            </section>
+            <section id="generalLayout">
+                <h2>General Layout of Rails</h2>
+                <p>
+                    Through the command line you can easily create a Rails project. The Rails engine automatically creates the folders and files needed. The general layout or structure of a Rails project helps us understand how Rails works and how similar it is to other MVC frameworks.
+                </p>
+                <div id="projectStructure">
+                    <ul>
+                        <li>
+                            /app
+                            <ul>
+                                <li>/controller</li>
+                                <li>/helpers</li>
+                                <li>/models</li>
+                                <li>
+                                    /views
+                                    <ul>
+                                        <li>/layouts</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>/bin</li>
+                        <li>/config</li>
+                        <li>/db</li>
+                        <li>/lib</li>
+                        <li>/log</li>
+                        <li>/public</li>
+                        <li>/test</li>
+                        <li>/tmp</li>
+                        <li>/vendor</li>
+                    </ul>
+                </div>
+                <p>
+                    The main folder is "/app" which contains most of the Ruby code as well as the views and templates. Within in the "/app" folder are the three categories of the Model View Controller (MVC) methodology. The "/app/helpers" folder contains files that assist the model and controller classes. The "/app/views/layouts" folder includes templates that are frequently used in the views.
+                </p>
+                <p>
+                    Despite the fact that Rails focuses on convention rather than configuration it still needs some configuration files, thus the "/config" folder. The "/config" folder also includes the routes file which specifies to Rails which controller is to serve which request to which view.
+                </p>
+                <p>
+                    Some other notable folders and files include: "/public" and "/db". The "/public" folder includes static files viewable to the world, like stylesheets and javascript files. The "/db" folder contains your current database schema where you can manage the database and SQL scripts.
+                </p>
+            </section>
+            <section id="gettingStarted">
+                <h2>Getting Started with Rails</h2>
+                <h3>1 Install Required Software</h3>
+                <ul>
+                    <li>Ruby</li>
+                    <li>RubyGems packaging system</li>
+                    <li>SQLite3 Database</li>
+                </ul>
+                <h3>2 Installing Rails</h3>
+                <ol>
+                    <li>
+                        Make sure that Ruby has been properly installed:<br/>
+                        <div class="codeInput">
+                            <code>$ ruby -v</code>
+                        </div>
+                        if it says something like <samp>ruby 1.9.3xxx</samp>, then we're ready to continue
+                    </li>
+                    <li>
+                        In order to install Ruby Rails we use the Gem <var>install</var> command:<br/>
+                        <div class="codeInput">
+                            <code>$ gem install rails</code>
+                        </div>
+                        <strong>OR</strong><br/>
+                        You can use 
+                        <a href="http://railsinstaller.org/">Rails Installer</a> 
+                        for Windows or 
+                        <a href="http://railsoneclick.com/">Rails One Click</a>
+                        for Mac OS X
+                    </li>
+                    <li>
+                        Verify Rails was installed properly:<br/>
+                        <div class="codeInput">
+                            <code>$ rails --version</code>
+                        </div>
+                        if it says something like <samp>Rails 4.0.0</samp>, then we're ready to continue
+                    </li>
+                    <li>
+                        Create a Rails application:<br/>
+                        <div class="codeInput">
+                            <code>$ rails new blog</code>
+                        </div>
+                    </li>
+                    <li>
+                        Run the Rails web server:<br/>
+                        <div class="codeInput">
+                            <code>$ rails server</code>
+                        </div>
+                    </li>
+                    <li>And we're ready to go!</li>
+                </ol>
+            </section>
+        </div>
+        <footer>
+            <div class="content">
+                <h1>References for this project</h1>
+                <ul>
+                    <li>
+                        <a href="http://guides.rubyonrails.org/">Rails Guide</a>
+                    </li>
+                    <li>
+                        <a href="http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails Directory Structure</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
