@@ -9,22 +9,12 @@
         
 	</head>
 	<body>
-		<header>
-            <div class="content">
-                <img src='rails.png'/>
-                <h1>Ruby On Rails</h1>                
-            </div>  
-            <nav>
-                <ul>
-                    <li><a href="index.html">Overview</a></li>
-                    <li><a href="tutorial.html">Tutorial</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                </ul>
-            </nav> 
-            <div class="fixedNav">
+        <div id="container">
+    		<header>
                 <div class="content">
                     <img src='rails.png'/>
-                </div>
+                    <h1>Ruby On Rails</h1>                
+                </div>  
                 <nav>
                     <ul>
                         <li><a href="index.html">Overview</a></li>
@@ -32,90 +22,101 @@
                         <li><a href="about.html">About Me</a></li>
                     </ul>
                 </nav> 
-            </div>                    
-        </header>       
-    	<div class="content">
-    		<h1>Quick Tutorial on Rails</h1>
-    		<p>
-    			Rails has several preset sample projects that it can create with the <code>$ rails new</code> command. In this tutorial we are going to make a simple blog
-    		</p>
-    		<h2>1 Create the Rails Project</h2>
-    		<div class="directions">
-    			<p>Open the terminal or command line and navigate to where you want the blog application to be then execute:</p>
-                <div class="codeInput">
-        		  <code>$ rails new blog</code>
-                </div>
-        		<p>This will create the sample project structure in the current directory.</p>
-    		</div>
-    		<h2>2 Test the application</h2>
-    		<div class="directions">
-    			<div class="codeInput">
-                    <code>
-            			$ cd blog<br/>
-            			$ rails server
-            		</code>
-                </div>
+                <div class="fixedNav">
+                    <div class="content">
+                        <img src='rails.png'/>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="tutorial.html">Tutorial</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                        </ul>
+                    </nav> 
+                </div>                    
+            </header>       
+        	<div id="body" class="content">
+        		<h1>Quick Tutorial on Rails</h1>
         		<p>
-        			This will start the Rails web server on port 3000. Go visit 
-        			<a href="http://localhost:3000">http://localhost:3000</a>
+        			Rails has several preset sample projects that it can create with the <code>$ rails new</code> command. In this tutorial we are going to make a simple blog
         		</p>
-        		<p>You should see a "Welcome Aboard" page. If so GREAT!</p>
-    		</div>
-    		<h2>3 Hello World</h2>
-    		<div class="directions">
-    			<p>Stop the server by hitting <code>Ctr+C</code> in the terminal window.</p>
-        		<p>In order to get Rails to display the typical "Hello World" you need to create a controller and a view. To do this execute this command in the terminal:</p>
-                <div class="codeInput">
-        		  <code>$ rails generate controller welcome index</code>
+        		<h2>1 Create the Rails Project</h2>
+        		<div class="directions">
+        			<p>Open the terminal or command line and navigate to where you want the blog application to be then execute:</p>
+                    <div class="codeInput">
+            		  <code>$ rails new blog</code>
+                    </div>
+            		<p>This will create the sample project structure in the current directory.</p>
+        		</div>
+        		<h2>2 Test the application</h2>
+        		<div class="directions">
+        			<div class="codeInput">
+                        <code>
+                			$ cd blog<br/>
+                			$ rails server
+                		</code>
+                    </div>
+            		<p>
+            			This will start the Rails web server on port 3000. Go visit 
+            			<a href="http://localhost:3000">http://localhost:3000</a>
+            		</p>
+            		<p>You should see a "Welcome Aboard" page. If so GREAT!</p>
+        		</div>
+        		<h2>3 Hello World</h2>
+        		<div class="directions">
+        			<p>Stop the server by hitting <code>Ctr+C</code> in the terminal window.</p>
+            		<p>In order to get Rails to display the typical "Hello World" you need to create a controller and a view. To do this execute this command in the terminal:</p>
+                    <div class="codeInput">
+            		  <code>$ rails generate controller welcome index</code>
+                    </div>
+            		<p>
+            			Rails will create several files for you. Open the "/app/views/welcome/index.erb" file with your favorite text editor and replace the code with:
+            		</p>
+                    <div class="codeInput">
+                        <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+                    </div>
+        		</div>
+        		<h2>4 Set the Homepage</h2>
+        		<div class="directions">
+        			<p>
+        				Now you need to tell Rails to go to this new view when we visit the root of the app (
+        				<a href="http://localhost:3000">http://localhost:3000</a>
+        				)
+        			</p>
+        			<p>
+        				Open the "/config/routs.rb" file. This file tells Rails how to handle requests coming into the application by redirecting them to specific controllers and methods. Find the line beginning with <code>#root</code> and uncomment it. It should look something like this:
+        			</p>
+                    <div class="codeInput">
+                        <code>root "welcome#index"</code>
+                    </div>
+        			<p>
+        				This tells Rails to map requests to the root of the application to the welcome controller's index action. And the <code>get "welcome/index"</code> also tells Rails to map requests to the welcome controller's inddex action.
+        			</p>
+        			<p>
+        				Run the <code>$ rails server</code> command in the terminal again and then revisit 
+        				<a href="http://localhost:3000">http://localhost:3000</a>. It should now show "Hello World"
+        			</p>
+        		</div>
+        		<h2>5 Continue the tutorial</h2>
+        		<div class="directions">
+        			<p>
+        				Now that you know the bare backbone you can continue this same tutorial at the
+        				<a href="http://guides.rubyonrails.org/getting_started.html#getting-up-and-running">Rails Guides page<a/>.
+        		</div>
+        	</div>
+            <footer>
+                <div class="content">
+                    <h1>References for this project</h1>
+                    <ul>
+                        <li>
+                            <a href="http://guides.rubyonrails.org/">Rails Guide</a>
+                        </li>
+                        <li>
+                            <a href="http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails Directory Structure</a>
+                        </li>
+                    </ul>
                 </div>
-        		<p>
-        			Rails will create several files for you. Open the "/app/views/welcome/index.erb" file with your favorite text editor and replace the code with:
-        		</p>
-                <div class="codeInput">
-                    <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
-                </div>
-    		</div>
-    		<h2>4 Set the Homepage</h2>
-    		<div class="directions">
-    			<p>
-    				Now you need to tell Rails to go to this new view when we visit the root of the app (
-    				<a href="http://localhost:3000">http://localhost:3000</a>
-    				)
-    			</p>
-    			<p>
-    				Open the "/config/routs.rb" file. This file tells Rails how to handle requests coming into the application by redirecting them to specific controllers and methods. Find the line beginning with <code>#root</code> and uncomment it. It should look something like this:
-    			</p>
-                <div class="codeInput">
-                    <code>root "welcome#index"</code>
-                </div>
-    			<p>
-    				This tells Rails to map requests to the root of the application to the welcome controller's index action. And the <code>get "welcome/index"</code> also tells Rails to map requests to the welcome controller's inddex action.
-    			</p>
-    			<p>
-    				Run the <code>$ rails server</code> command in the terminal again and then revisit 
-    				<a href="http://localhost:3000">http://localhost:3000</a>. It should now show "Hello World"
-    			</p>
-    		</div>
-    		<h2>5 Continue the tutorial</h2>
-    		<div class="directions">
-    			<p>
-    				Now that you know the bare backbone you can continue this same tutorial at the
-    				<a href="http://guides.rubyonrails.org/getting_started.html#getting-up-and-running">Rails Guides page<a/>.
-    		</div>
-    		
-    	</div>
-        <footer>
-            <div class="content">
-                <h1>References for this project</h1>
-                <ul>
-                    <li>
-                        <a href="http://guides.rubyonrails.org/">Rails Guide</a>
-                    </li>
-                    <li>
-                        <a href="http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails Directory Structure</a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+            </footer>
+        </div>
 	</body>
 </html>

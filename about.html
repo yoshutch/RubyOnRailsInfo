@@ -8,22 +8,12 @@
         <link rel="stylesheet" href="aboutStyle.css">
     </head>
     <body>
-        <header>
-            <div class="content">
-                <img src='rails.png'/>
-                <h1>Ruby On Rails</h1>                
-            </div>  
-            <nav>
-                <ul>
-                    <li><a href="index.html">Overview</a></li>
-                    <li><a href="tutorial.html">Tutorial</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                </ul>
-            </nav> 
-            <div class="fixedNav">
+        <div id="container">
+            <header>
                 <div class="content">
                     <img src='rails.png'/>
-                </div>
+                    <h1>Ruby On Rails</h1>                
+                </div>  
                 <nav>
                     <ul>
                         <li><a href="index.html">Overview</a></li>
@@ -31,10 +21,20 @@
                         <li><a href="about.html">About Me</a></li>
                     </ul>
                 </nav> 
-            </div>                    
-        </header>
-        <section>
-            <div class="content">
+                <div class="fixedNav">
+                    <div class="content">
+                        <img src='rails.png'/>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Overview</a></li>
+                            <li><a href="tutorial.html">Tutorial</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                        </ul>
+                    </nav> 
+                </div>                    
+            </header>            
+            <div id="body" class="content">
                 <div class="about left">
                     <h1>About Me</h1>                
                     <p class="myName">Scott Hutchings</p>
@@ -61,20 +61,20 @@
                         </li>
                     </ul>
                 </div>                
-            </div>          
-        </section>
-        <footer>
-            <div class="content">
-                <h1>References for this project</h1>
-                <ul>
-                    <li>
-                        <a href="http://guides.rubyonrails.org/">Rails Guide</a>
-                    </li>
-                    <li>
-                        <a href="http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails Directory Structure</a>
-                    </li>
-                </ul>
             </div>
-        </footer>
+            <footer>
+                <div class="content">
+                    <h1>References for this project</h1>
+                    <ul>
+                        <li>
+                            <a href="http://guides.rubyonrails.org/">Rails Guide</a>
+                        </li>
+                        <li>
+                            <a href="http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails Directory Structure</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

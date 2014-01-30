@@ -1,11 +1,9 @@
 
-body {
+html, body {
 	margin: 0;	
-	padding: 0 0 100px 0;	
+	padding: 0;	
 	font-family: 'Fenix', serif;
 	height: 100%;
-	/*min-height: 100%;*/
-	position: relative;
 }
 
 h1, h2, header, footer {
@@ -85,7 +83,17 @@ nav a:active { 	/* selected link */
 	color:#0000FF;
 }
 
+#container {
+	min-height: 100%;
+	position: relative;
+}
+
+#body {
+	padding: 0 0 100px 0;
+}
+
 footer {
+
 	background-color: #700000;
 	padding-bottom: 20px;
 	position: absolute;
