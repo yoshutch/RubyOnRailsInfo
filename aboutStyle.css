@@ -10,7 +10,6 @@ div.about h1 {
 }
 div.about h2 {
 	text-align: center;
-	font-size: large;
 }
 
 div.about.right {
@@ -22,7 +21,6 @@ div.about.left {
 }
 
 div.about.left p.myName {
-	font-size: large;	
 	font-weight: bold;
 	margin: 0px;
 }
@@ -32,3 +30,27 @@ div.about.right img {
 	border: solid #700000 3px;
 }
 
+@media screen and (max-width: 600px) {
+	div.about.right {
+		max-width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	div.about.left {
+		max-width: 100%;
+		display: block;
+	}
+
+	div.about.right img{
+		width: 90%;
+	}
+
+	div.about.right ul {
+		list-style: none;
+	}
+
+	#body {
+		padding-bottom: 200px;
+	}
+}
