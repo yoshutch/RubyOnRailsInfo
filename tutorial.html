@@ -6,7 +6,15 @@
         <link href='http://fonts.googleapis.com/css?family=Fenix|Hammersmith+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="tutorialStyle.css"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("nav ul li:nth-child(2) a").addClass("highlighted");                
+            });
+        </script>    
 	</head>
 	<body>
         <div id="container">     
@@ -33,7 +41,7 @@
                     </div>
             		<p>
             			This will start the Rails web server on port 3000. Go visit 
-            			<a href="http://localhost:3000">http://localhost:3000</a>
+            			<a href="http://localhost:3000" title="View running server on local machine">http://localhost:3000</a>
             		</p>
             		<p>You should see a "Welcome Aboard" page. If so GREAT!</p>
         		</div>
@@ -55,7 +63,7 @@
         		<div class="directions">
         			<p>
         				Now you need to tell Rails to go to this new view when we visit the root of the app (
-        				<a href="http://localhost:3000">http://localhost:3000</a>
+        				<a href="http://localhost:3000" title="View running server on local machine">http://localhost:3000</a>
         				)
         			</p>
         			<p>
@@ -69,14 +77,14 @@
         			</p>
         			<p>
         				Run the <code>$ rails server</code> command in the terminal again and then revisit 
-        				<a href="http://localhost:3000">http://localhost:3000</a>. It should now show "Hello World"
+        				<a href="http://localhost:3000" title="View running server on local machine">http://localhost:3000</a>. It should now show "Hello World"
         			</p>
         		</div>
         		<h2>5 Continue the tutorial</h2>
         		<div class="directions">
         			<p>
         				Now that you know the bare backbone you can continue this same tutorial at the
-        				<a href="http://guides.rubyonrails.org/getting_started.html#getting-up-and-running">Rails Guides page<a/>.
+        				<a href="http://guides.rubyonrails.org/getting_started.html#getting-up-and-running" title="Continue the Rails Tutorial here">Rails Guides page<a/>.
         		</div>
         	</div>
         </div>

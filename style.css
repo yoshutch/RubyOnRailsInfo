@@ -68,6 +68,9 @@ nav ul li, footer ul li {
 	display: inline-block;	
 }
 
+nav ul li a.highlighted {
+	background-color: rgb(190,110,83);
+}
 nav ul li a {
 	background-color: rgb(176,66,55);
 	border: solid #282828 1px;
@@ -77,6 +80,7 @@ nav ul li a {
     transition: all .25s;
 }
 
+
 nav a:link {     /* unvisited link */
 	text-decoration: none;
 	color:white;
@@ -84,7 +88,7 @@ nav a:link {     /* unvisited link */
 nav a:visited {color:white;}  /* visited link */
 nav a:hover {	/* mouse over link */
 	/*padding: 5px 12px;*/
-	background-color: rgb(202,139,83);
+	background-color: rgb(202,139,83) !important;
 	cursor: pointer;
 }  
 nav a:active { 	/* selected link */
@@ -192,6 +196,10 @@ section {
 	margin-top: 10px;
 	padding-top: 5px;
 	text-align: right;
+}
+
+.popupImg {
+    width: 100%;
 }
 
 /* RWD styling */

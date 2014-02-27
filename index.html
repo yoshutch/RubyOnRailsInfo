@@ -6,12 +6,38 @@
         <link href='http://fonts.googleapis.com/css?family=Fenix|Hammersmith+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="indexStyle.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#railsInstaller").tooltip({
+                    content: function(){
+                        return "<img class='popupImg' src='railsInstaller.png'>";
+                    }
+                });                
 
+                $("span.more").click(function(){
+                    var element = $(this);
+                    var next = element.next();                    
+                    if (next.css("display") == "none"){                        
+                        element.parent().addClass("open");
+                    } else {
+                        element.parent().removeClass("open");
+                    }
+                    next.toggle("swing");
+                }).attr("title","Click to view folder");
+
+                $("nav ul li:nth-child(1) a").addClass("highlighted");
+            });
+        </script>
+        <style type="text/css">
+            
+        </style>
     </head>
     <body>
         <div id="container">
-
             <div id="body" class="content">
                 <h1>Ruby on Rails</h1>
                 <section id="whatIsIt">
@@ -50,14 +76,14 @@
                     </p>
                     <div id="projectStructure">
                         <ul>
-                            <li>
-                                /app
+                            <li class="open">
+                                <span class="more">/app</span>
                                 <ul>
                                     <li>/controller</li>
                                     <li>/helpers</li>
                                     <li>/models</li>
-                                    <li>
-                                        /views
+                                    <li class="open">
+                                        <span class="more">/views</span>
                                         <ul>
                                             <li>/layouts</li>
                                         </ul>
@@ -109,10 +135,13 @@
                             </div>
                             <strong>OR</strong><br/>
                             You can use 
-                            <a href="http://railsinstaller.org/">Rails Installer</a> 
-                            for Windows or 
-                            <a href="http://railsoneclick.com/">Rails One Click</a>
-                            for Mac OS X
+                            <a id="railsInstaller" href="http://railsinstaller.org/" title="A client-side application to help install Ruby on Rails">Rails Installer</a> 
+                            for Windows or Mac. If you have OS X Mavericks or later, simply install rails  with: 
+                            <code>gem install rails</code>
+                            <!-- <a class="tooltip" href="http://railsoneclick.com/" title="The Mac OS client to install Ruby on Rails">
+                                Rails One Click
+                            </a>
+                            for Mac OS X -->
                         </li>
                         <li>
                             Verify Rails was installed properly:<br/>

@@ -5,4 +5,14 @@ section {
 
 div#projectStructure ul {
 	list-style: none;
+	/*list-style-image: url('Folder-icon.png');*/
 }
+div#projectStructure li {
+	list-style-image: url('Folder-icon.png');
+}
+div#projectStructure li.open {
+	list-style-image: url('Folder-open-icon.png');
+}
+span.more {
+	font-weight: bold;
+	cursor: pointer;

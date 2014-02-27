@@ -41,10 +41,10 @@ var footerStr = "<footer>" +
                     "<h2>References for this project</h2>" +
                     "<ul>" +
                         "<li>" +
-                            "<a href='http://guides.rubyonrails.org/''>Rails Guide</a>" +
+                            "<a href='http://guides.rubyonrails.org/' title='View the Official Rails Guide Webpage'>Rails Guide</a>" +
                         "</li>" +
                         "<li>" +
-                            "<a href='http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm'>Ruby on Rails Directory Structure</a>" +
+                            "<a href='http://www.tutorialspoint.com/ruby-on-rails/rails-directory-structure.htm' title='View a helpful resource'>Ruby on Rails Directory Structure</a>" +
                         "</li>" +
                     "</ul>" +
                 "</div>" +
@@ -52,4 +52,5 @@ var footerStr = "<footer>" +
 footerDiv.innerHTML = footerStr;
 container.appendChild(footerDiv);
 
+$("a").tooltip();
 

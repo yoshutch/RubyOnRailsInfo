@@ -4,7 +4,7 @@ var timerLength = 10000;
 var cancelURL = "http://google.com";
 
 // begin the timer
-timer();
+//timer();
 
 function timer () {
 	setTimeout(function(){
